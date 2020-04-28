@@ -2,6 +2,6 @@
 for number in range(0, 100):
     if (number % 10 != 0 and number / 10 < number % 10):
         if (number < 89):
-            print("{0:02d}".format(number), end = ", ")
+            print("{0:02d}".format(number), end=", ")
         else:
             print(number)
