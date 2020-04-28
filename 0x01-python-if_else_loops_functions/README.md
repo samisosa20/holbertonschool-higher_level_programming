@@ -106,61 +106,73 @@ Write a program that prints all possible different combinations of two digits.
 
 ### 7. islower
 
-Complete this source code
+Write a function that checks for lowercase character.
 
-- You can find the source code here
-- You are not allowed to use any loops or conditional statements
-- Your program should be exactly 8 lines long
-- word_first_3 should contain the first 3 letters of the variable word
-- word_last_2 should contain the last 2 letters of the variable word
-- middle_word should contain the value of the variable word without the first and last letters
+- Prototype: def islower(c):
+- Returns True if c is lowercase
+- Returns False otherwise
+- You are not allowed to import any module
+- You are not allowed to use str.upper() and str.isupper()
+- Tips: ord()
+You don’t need to understand __import__
 
 ### 8. To uppercase
 
-Complete this source code to print object-oriented programming with Python, followed by a new line.
+Write a function that prints a string in uppercase followed by a new line.
 
-- You can find the source code here
-- You are not allowed to use any loops or conditional statements
-- Your program should be exactly 5 lines long
-- You are not allowed to create new variables
-- You are not allowed to use string literals
+- Prototype: def uppercase(str):
+- You can only use no more than 2 print functions with string format
+- You can only use one loop in your code
+- You are not allowed to import any module
+- You are not allowed to use str.upper() and str.isupper()
+- Tips: ord()
+You don’t need to understand __import__
 
 ### 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important 
 
-Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
-Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)
+Write a function that prints the last digit of a number.
+
+- Prototype: def print_last_digit(number):
+- Returns the value of the last digit
+- You are not allowed to import any module
+You don’t need to understand __import__
 
 ### 10. a + b
+
+Write a function that adds two integers and returns the result.
+
+- Prototype: def add(a, b):
+- Returns the value of a + b
+- You are not allowed to import any module
+You don’t need to understand __import__
+
+### 11. a ^ b
+
+Write a function that computes a to the power of b and return the value.
+
+- Prototype: def pow(a, b):
+- Returns the value of a ^ b
+- You are not allowed to import any module
+You don’t need to understand __import__
+
+### 12. Fizz Buzz 
+
+Write a function that prints the numbers from 1 to 100 separated by a space.
+
+- For multiples of three print Fizz instead of the number and for multiples of five print Buzz.
+- For numbers which are multiples of both three and five print FizzBuzz.
+- Prototype: def fizzbuzz():
+- Each element should be followed by a space
+- You are not allowed to import any module
+You don’t need to understand __import__
+
+### 13. Insert in sorted linked list 
 
 Technical interview preparation:
 
 - You are not allowed to google anything
 - Whiteboard first
-- This task and all future technical interview prep tasks will include checks for the efficiency of your solution, i.e. is your solution’s runtime fast enough, does your solution require extra memory usage / mallocs, etc.
-Write a function in C that checks if a singly linked list has a cycle in it.
+Write a function in C that inserts a number into a sorted singly linked list.
 
-- Prototype: int check_cycle(listint_t *list);
-- Return: 0 if there is no cycle, 1 if there is a cycle
-Requirements:
-
-- Only these functions are allowed: write, printf, putchar, puts, malloc, free
-
-### 11. a ^ b
-
-Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
-
-- Use the function write from the sys module
-- You are not allowed to use print
-- Your script should print to stderr
-- Your script should exit with the status code 1
-- (Dora Korpar was a Holberton student in Cohort 0 of San Francisco)
-
-### 12. Fizz Buzz 
-
-Write a script that compiles a Python script file.
-The Python file name will be stored in the environment variable $PYFILE
-The output filename has to be $PYFILEc (ex: export PYFILE=my_main.py => output filename: my_main.pyc)
-
-### 13. Insert in sorted linked list 
-
-Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
+- Prototype: listint_t *insert_node(listint_t **head, int number);
+- Return: the address of the new node, or NULL if it failed
