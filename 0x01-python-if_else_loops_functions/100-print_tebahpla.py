@@ -5,4 +5,4 @@ for str in range(122, 96, -1):
         string += chr(str - 32)
     else:
         string += chr(str)
-print(string, end='')
+print("{}".format(string), end='')
