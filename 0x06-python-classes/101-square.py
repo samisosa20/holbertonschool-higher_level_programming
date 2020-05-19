@@ -1,6 +1,16 @@
 #!/usr/bin/python3
+"""Define classes for a singly-linked list."""
+
+
 class Square:
+    """Represent a node in a singly-linked list."""
+
     def __init__(self, size=0, position=(0, 0)):
+        """Initialize a new Node.
+        Args:
+            data (int): The data of the new Node.
+            next_node (Node): The next node of the new Node.
+        """
         self.size = size
         self.position = position
 
