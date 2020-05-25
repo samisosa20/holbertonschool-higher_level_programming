@@ -44,6 +44,6 @@ class Rectangle:
             return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        string = "{}".format('\n'.join(['#' * self.__width for row in
-                range(0, self.__height)]))
+        string = "{}".format('\n'.join(
+            ['#' * self.__width for row in range(0, self.__height)]))
         return string

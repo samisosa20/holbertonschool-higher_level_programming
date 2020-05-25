@@ -47,8 +47,9 @@ class Rectangle:
             return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        string = "{}".format('\n'.join([str(self.print_symbol) * self.__width
-                for row in range(0, self.__height)]))
+        a = self.print_symbol
+        string = "{}".format('\n'.join(
+            [str(a) * self.__width for row in range(0, self.__height)]))
         return string
 
     def __repr__(self):
