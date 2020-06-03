@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-""" 6-from_json_string.py """
+""" 7-from_json_string.py """
 import json
-write_file = __import__('3-write_file').write_file
 
 
 def save_to_json_file(my_obj, filename):
@@ -12,4 +11,5 @@ def save_to_json_file(my_obj, filename):
         filename {str} -- file's name
     """
 
-    write_file(filename, json.dumps(my_obj))
+    with open(filename, 'w') as file:
+        json.dump(my_obj, file)
