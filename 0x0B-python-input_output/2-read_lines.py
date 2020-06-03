@@ -12,7 +12,7 @@ def read_lines(filename="", nb_lines=0):
 
     with open(filename, mode='r', encoding="UTF8") as file:
         if (nb_lines <= 0):
-                print(file.read())
+                print(file.read(), end="")
         else:
             i = 0
             while (i < nb_lines):
