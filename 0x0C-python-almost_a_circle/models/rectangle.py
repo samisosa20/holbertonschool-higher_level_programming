@@ -46,11 +46,13 @@ class Rectangle(Base):
         }
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format \
-        (self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}" \
+            .format(self.id, self.x, self.y, self.width, self.height)
+
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, val):
         if type(val) is not int:
@@ -62,6 +64,7 @@ class Rectangle(Base):
     @property
     def height(self):
         return self.__height
+
     @height.setter
     def height(self, val):
         if type(val) is not int:
@@ -73,6 +76,7 @@ class Rectangle(Base):
     @property
     def x(self):
         return self.__x
+
     @x.setter
     def x(self, val):
         if type(val) is not int:
@@ -84,6 +88,7 @@ class Rectangle(Base):
     @property
     def y(self):
         return self.__y
+
     @y.setter
     def y(self, val):
         if type(val) is not int:
@@ -91,7 +96,7 @@ class Rectangle(Base):
         if val < 0:
             raise ValueError("y must be >= 0")
         self.__y = val
-    
+
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute """
         attr = ["id", "width", "height", "x", "y"]
