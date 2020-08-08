@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-''' SELECT all data in the table
-    states with first leter is N'''
+"""
+Takes in an argument and displays all values in the `states`
+table of `hbtn_0e_0_usa` where `name` matches the argument.
+"""
 
 if __name__ == '__main__':
-    import sys
+    from sys import argv
     import MySQLdb
+
+    name = argv[4]
 
     db = MySQLdb.connect(
             host="localhost",
             port=3306,
-            user=sys.argv[1],
-            passwd=sys.argv[2],
-            db=sys.argv[3]
+            user=argv[1],
+            passwd=argv[2],
+            db=argv[3]
             )
-
-    # you must create a Cursor object. It will let
-    #  you execute all the queries you need
-
-    cur = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}' \
-        ORDER BY id".format(sys.argv[4])
-
-    # Use all the SQL you like
-    cur.execute(query)
-    # print all the first cell of all the rows
-    for row in cur.fetchall():
-        print (row)
-    cur.close()
+    cursor = db.cursor()
+    cursor.execute(("SELECT * FROM states "
+                    "WHERE name='{}' "
+                    "ORDER BY id".format(name)))
+    states = cursor.fetchall()
+    for state in states:
+        if state[1] == name:
+            print(state)
+    cursor.close()
     db.close()
