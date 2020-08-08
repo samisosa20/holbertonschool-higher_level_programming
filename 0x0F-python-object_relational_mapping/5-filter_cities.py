@@ -18,13 +18,13 @@ if __name__ == '__main__':
     #  you execute all the queries you need
     cur = db.cursor()
 
-    # Use all the SQL you like
-    cur.execute(("SELECT cities.id, cities.name FROM cities \
-    JOIN states ON (states.id = cities.state_id) \
-    WHERE states.name = %s ORDER BY cities.id"), state)
-
-    # print all the first cell of all the rows
-    for row in cur.fetchall():
-        print (row[1])
-    cur.close()
+    cursor.execute(("SELECT cities.id, cities.name \
+                FROM states JOIN cities \
+                ON states.id = cities.state_id \
+                WHERE states.name = %s \
+                ORDER BY cities.id ASC"), state)
+    cities = cursor.fetchall()
+    for city in cities:
+        print(city)
+    cursor.close()
     db.close()
