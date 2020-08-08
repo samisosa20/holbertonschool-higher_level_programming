@@ -5,25 +5,24 @@ states with first leter is N
 """
 
 if __name__ == '__main__':
-    import sys
+    from sys import argv
     import MySQLdb
 
-    name = (sys.argv[4],)
+    name = (argv[4],)
+
     db = MySQLdb.connect(
             host="localhost",
             port=3306,
-            user=sys.argv[1],
-            passwd=sys.argv[2],
-            db=sys.argv[3]
+            user=argv[1],
+            passwd=argv[2],
+            db=argv[3]
             )
-
-    cur = db.cursor()
-
-    cur.execute(("SELECT * FROM states "
+    cursor = db.cursor()
+    cursor.execute(("SELECT * FROM states "
                     "WHERE name=%s "
                     "ORDER BY id"), name)
-    states = cur.fetchall()
-    for row in states:
-        print (row)
-    cur.close()
+    states = cursor.fetchall()
+    for state in states:
+        print(state)
+    cursor.close()
     db.close()
