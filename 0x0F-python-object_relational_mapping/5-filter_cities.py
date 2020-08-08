@@ -6,8 +6,13 @@ if __name__ == '__main__':
     import MySQLdb
 
     state = (sys.argv[4],)
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-            passwd=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=argv[1],
+            passwd=argv[2],
+            db=argv[3]
+            )
 
     # you must create a Cursor object. It will let
     #  you execute all the queries you need
