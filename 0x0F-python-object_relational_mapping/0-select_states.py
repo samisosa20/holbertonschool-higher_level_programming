@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" SELECT all data in the table states"""
+"""
+SELECT all data in the table states
+"""
 
 if __name__ == '__main__':
     import sys
