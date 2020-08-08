@@ -8,9 +8,9 @@ if __name__ == '__main__':
     db = MySQLdb.connect(
             host="localhost",
             port=3306,
-            user=argv[1],
-            passwd=argv[2],
-            db=argv[3]
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3]
             )
 
     # you must create a Cursor object. It will let
