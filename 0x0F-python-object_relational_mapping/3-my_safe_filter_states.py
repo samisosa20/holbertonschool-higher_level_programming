@@ -15,16 +15,11 @@ if __name__ == '__main__':
             db=sys.argv[3]
             )
 
-    # you must create a Cursor object. It will let
-    #  you execute all the queries you need
-
     cur = db.cursor()
 
-    # Use all the SQL you like
     cur.execute(("SELECT * FROM states \
                     WHERE name=%s \
                     ORDER BY id"), name)
-    # print all the first cell of all the rows
     for row in cur.fetchall():
         print (row)
     cur.close()
