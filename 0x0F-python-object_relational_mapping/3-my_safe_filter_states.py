@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-''' SELECT all data in the table
-    states with first leter is N'''
+""" 
+SELECT all data in the table
+states with first leter is N
+"""
 
 if __name__ == '__main__':
     import sys
