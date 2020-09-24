@@ -1,7 +1,7 @@
 $.get(
-  'https://swapi.co/api/people/5/?format=json',
+  "https://swapi-api.hbtn.io/api/people/5/?format=json",
   (data) => {
-    $('#character').append(`<p>${data.name}</p>`);
+    $("#character").append(`<p>${data.name}</p>`);
   },
-  'JSON'
+  "JSON"
 );
